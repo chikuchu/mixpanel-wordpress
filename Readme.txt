@@ -1,8 +1,8 @@
 === MixPanel  ===
-Contributors: jittara
-Tags: analytics, funnels
+Contributors: Jitta Raghavender Rao
+Tags: analytics, metrics, funnels, mixpanel, kissmetrics
 Requires at least: 3.3
-Tested up to: 3.8RC2
+Tested up to: 4.0
 Stable tag: trunk 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,6 +32,5 @@ On every page in WordPress, you'll see an option panel for MixPanel Event Label.
 show up as an event in MixPanel.
 
 @TODO
-
-2. build some logic to do smarter tracking
-3. add stuff to track links in a smart way
+1. build some logic to do smarter tracking
+2. add stuff to track links in a smart way
