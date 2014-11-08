@@ -42,7 +42,7 @@
           'Page Name': document.title,
           'Page URL': window.location.pathname
         }); 
-        </script> ";
+        </script>";
       }
       else {
         if($event_label == "") {
@@ -60,7 +60,7 @@
           'Page Name': document.title,
           'Page URL': window.location.pathname
         }); 
-        </script> ";
+        </script>";
       }
       return true;
     }
