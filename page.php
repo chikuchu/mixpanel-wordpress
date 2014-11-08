@@ -64,8 +64,7 @@
       }
       return true;
     }
-
-
+    
     /**
     * Adds the Javascript necessary to start tracking via MixPanel.
     * this gets added to the <head> section usually.
