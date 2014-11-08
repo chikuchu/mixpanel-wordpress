@@ -31,21 +31,17 @@
         }
 
         echo "<script type='text/javascript'>
-        var rightNow = new Date(); 
-        var humanDate = rightNow.toDateString(); 
+        var rightNow = new Date();
+        var humanDate = rightNow.toDateString();
 
-        mixpanel.register_once({ 
-        'first_wp_page': document.title,
-        'first_wp_contact': humanDate 
-
+        mixpanel.register_once({
+          'first_wp_page': document.title,
+          'first_wp_contact': humanDate
         });
-        mixpanel.track(\"Viewed $event_label\", 
-        {
-        'Page Name': document.title, 
-        'Page URL': window.location.pathname
-
-        }
-        ); 
+        mixpanel.track(\"Viewed $event_label\", {
+          'Page Name': document.title,
+          'Page URL': window.location.pathname
+        }); 
         </script> ";
       }
       else {
@@ -53,21 +49,17 @@
           $event_label = "Page";
         }
         echo "<script type='text/javascript'>
-        var rightNow = new Date(); 
-        var humanDate = rightNow.toDateString(); 
+        var rightNow = new Date();
+        var humanDate = rightNow.toDateString();
 
-        mixpanel.register_once({ 
-        'first_wp_page': document.title,
-        'first_wp_contact': humanDate 
-
+        mixpanel.register_once({
+          'first_wp_page': document.title,
+          'first_wp_contact': humanDate
         });
-        mixpanel.track(\"Viewed $event_label\", 
-        {
-        'Page Name': document.title, 
-        'Page URL': window.location.pathname
-
-        }
-        ); 
+        mixpanel.track(\"Viewed $event_label\", {
+          'Page Name': document.title,
+          'Page URL': window.location.pathname
+        }); 
         </script> ";
       }
       return true;
@@ -75,8 +67,8 @@
 
 
     /**
-    * Adds the Javascript necessary to start tracking via MixPanel. 
-    * this gets added to the <head> section usually. 
+    * Adds the Javascript necessary to start tracking via MixPanel.
+    * this gets added to the <head> section usually.
     *
     * @return [type] [description]
     */
@@ -84,15 +76,15 @@
       $settings = (array) get_option( 'mixpanel_settings' );
       if(!isset($settings['token_id'])) {
       self::no_mixpanel_token_found();
-      return false;  
+      return false;
     }
 
     require_once dirname(__FILE__) . '/mixpaneljs.php';
-    return true;  
+    return true;
     }
 
     static function no_mixpanel_token_found() {
-      echo "<!-- No MixPanel Token Defined -->"; 
+      echo "<!-- No MixPanel Token Defined -->";
     }
   }
 ?>
